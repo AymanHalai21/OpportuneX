@@ -35,3 +35,6 @@ cd backend   && git init && git add . && git commit -m "Initial commit: Spring B
 cd ../frontend && git init && git add . && git commit -m "Initial commit: React frontend" && git branch -M main && git remote add origin <frontend-repo-url> && git push -u origin main
 ```
 (`docker-compose.yml` lives one level above both - keep it in the parent folder or add it to either repo.)
+
+it would be in one repo only as the code would break as there are multiple dependencies are there between frontend and backend 
+
