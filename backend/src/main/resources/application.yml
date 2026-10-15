@@ -1,0 +1,31 @@
+server:
+  port: ${PORT:8080}
+  forward-headers-strategy: framework
+  error:
+    include-message: always
+
+spring:
+  datasource:
+    # MySQL 8+ (works with MariaDB 10.5+ too). On a hosted MySQL just set DB_URL / DB_USERNAME / DB_PASSWORD.
+    url: ${DB_URL:jdbc:mysql://localhost:3306/opportunex?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:10}
+      connection-timeout: 20000
+
+app:
+  db:
+    # true  = on start-up create tables + stored procedures (+ demo data once, on an empty database)
+    # false = you run /database/*.sql yourself in MySQL Workbench / mysql client
+    init: ${DB_INIT:true}
+  jwt:
+    secret: ${JWT_SECRET:change-this-secret-to-a-random-string-of-at-least-32-chars}
+    expiry-ms: ${JWT_EXPIRY_MS:2592000000}
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:3000,http://localhost:5173}
+
+logging:
+  level:
+    com.opportunex: INFO

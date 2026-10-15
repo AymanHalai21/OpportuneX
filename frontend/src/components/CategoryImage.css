@@ -1,0 +1,280 @@
+.category-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Custom & Photographic Image Banner Styling */
+.category-image.custom-banner {
+  background: #0f172a;
+}
+
+.custom-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.event-card:hover .custom-banner-img {
+  transform: scale(1.04);
+}
+
+/* Scrim overlay for contrast under text & pills */
+.custom-banner-scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.22) 0%,
+    rgba(15, 23, 42, 0.02) 40%,
+    rgba(15, 23, 42, 0.4) 100%
+  );
+}
+
+/* Base Default / Fallback Vector Banner System */
+.default-banner {
+  background-color: #0f172a;
+}
+
+/* Background Graphic Container */
+.banner-bg-graphics {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.banner-glow-orb {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.45;
+  transition: transform 0.3s ease;
+}
+
+.banner-grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+}
+
+.banner-geometric-shapes {
+  position: absolute;
+  inset: 0;
+}
+
+.banner-geometric-shapes .shape {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.banner-geometric-shapes .shape--1 {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  left: 8%;
+  transform: rotate(15deg);
+}
+
+.banner-geometric-shapes .shape--2 {
+  width: 40px;
+  height: 40px;
+  bottom: 12%;
+  right: 12%;
+  transform: rotate(-20deg);
+}
+
+.banner-geometric-shapes .shape--3 {
+  width: 80px;
+  height: 80px;
+  bottom: -20px;
+  left: 20%;
+  border-radius: 50%;
+  border-style: dashed;
+}
+
+/* Center Content & Icon Badges */
+.banner-center-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.banner-icon-container {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.category-image:hover .banner-icon-container {
+  transform: scale(1.06);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.banner-primary-icon {
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.banner-sub-icon-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.banner-label-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.banner-category-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.banner-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Category Specific Themes */
+
+/* 1. Hackathon: Deep Navy Slate -> Electric Blue */
+.cat-hackathon {
+  background: linear-gradient(135deg, #090e17 0%, #0f172a 45%, #1e3a8a 100%);
+}
+.cat-hackathon .banner-glow-orb {
+  background: #3b82f6;
+}
+.cat-hackathon .banner-icon-container {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+/* 2. Workshop: Deep Forest -> Teal Emerald */
+.cat-workshop {
+  background: linear-gradient(135deg, #041a14 0%, #064e3b 45%, #0d9488 100%);
+}
+.cat-workshop .banner-glow-orb {
+  background: #10b981;
+}
+.cat-workshop .banner-icon-container {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(52, 211, 153, 0.35);
+}
+
+/* 3. Seminar: Deep Indigo -> Rich Purple */
+.cat-seminar {
+  background: linear-gradient(135deg, #0f0c20 0%, #312e81 45%, #6366f1 100%);
+}
+.cat-seminar .banner-glow-orb {
+  background: #8b5cf6;
+}
+.cat-seminar .banner-icon-container {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(196, 181, 253, 0.35);
+}
+
+/* 4. Cultural: Dark Rose -> Vibrant Coral Red */
+.cat-cultural {
+  background: linear-gradient(135deg, #20070a 0%, #881337 45%, #e11d48 100%);
+}
+.cat-cultural .banner-glow-orb {
+  background: #f43f5e;
+}
+.cat-cultural .banner-icon-container {
+  background: rgba(244, 63, 94, 0.2);
+  border-color: rgba(251, 113, 133, 0.35);
+}
+
+/* 5. Competition: Dark Bronze -> Warm Amber Gold */
+.cat-competition {
+  background: linear-gradient(135deg, #1c0d02 0%, #78350f 45%, #d97706 100%);
+}
+.cat-competition .banner-glow-orb {
+  background: #f59e0b;
+}
+.cat-competition .banner-icon-container {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(252, 211, 77, 0.35);
+}
+
+/* Small context (e.g. thumbnails in History or Lists) */
+.profile-history-thumb .banner-label-group,
+.small-thumb .banner-label-group,
+.auth-preview-thumb .banner-label-group {
+  display: none;
+}
+
+.profile-history-thumb .banner-icon-container,
+.small-thumb .banner-icon-container,
+.auth-preview-thumb .banner-icon-container {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.profile-history-thumb .banner-primary-icon,
+.small-thumb .banner-primary-icon,
+.auth-preview-thumb .banner-primary-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.profile-history-thumb .banner-sub-icon-badge,
+.small-thumb .banner-sub-icon-badge,
+.auth-preview-thumb .banner-sub-icon-badge {
+  display: none;
+}

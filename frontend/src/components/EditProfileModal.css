@@ -1,0 +1,64 @@
+.edit-profile-modal {
+  max-width: 500px;
+}
+
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-profile-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edit-profile-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edit-profile-body label span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.edit-profile-body input,
+.edit-profile-body select {
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13.5px;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.edit-profile-body input:focus,
+.edit-profile-body select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.edit-profile-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .edit-profile-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.edit-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

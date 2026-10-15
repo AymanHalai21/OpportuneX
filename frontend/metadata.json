@@ -1,0 +1,6 @@
+{
+  "name": "OpportuneX",
+  "description": "College event management and discovery platform for students across India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,101 @@
+export const currentUser = {
+  name: 'Arjun Sharma',
+  email: 'arjun@iitd.ac.in',
+  college: 'IIT Delhi',
+  program: 'B.Tech Computer Science',
+  year: '3rd Year',
+  avatar: '',
+  stats: {
+    eventsJoined: 1,
+    eventsHosted: 2,
+    badgesEarned: 6,
+    xpPoints: 1250
+  },
+  interests: ['Hackathons', 'AI/ML', 'Product Design', 'Open Source', 'Music', 'Web Dev'],
+  badges: [
+    {
+      id: 'badge-1',
+      title: 'Hackathon Winner',
+      subtitle: '1st Place Winner',
+      category: 'Hackathon',
+      event: 'HackSphere 2025',
+      dateEarned: 'Aug 2025',
+      type: 'Award',
+      emoji: '🏆',
+      hasCertificate: true,
+      certificateId: 'OX-CERT-2025-0841',
+      issuer: 'IIT Delhi Tech Club & DevComm',
+      certificateTitle: 'Certificate of Excellence',
+      description: 'Awarded for securing 1st place in the Pan-India AI Hackathon.'
+    },
+    {
+      id: 'badge-2',
+      title: 'Full Stack Master',
+      subtitle: 'Completed Workshop',
+      category: 'Workshop',
+      event: 'Full Stack Web Bootcamp',
+      dateEarned: 'Jul 2025',
+      type: 'Certificate',
+      emoji: '🎓',
+      hasCertificate: true,
+      certificateId: 'OX-CERT-2025-0719',
+      issuer: 'DevClub IITD',
+      certificateTitle: 'Certificate of Completion',
+      description: 'Successfully completed 30 hours of intensive full stack development training.'
+    },
+    {
+      id: 'badge-3',
+      title: 'AI Symposium Fellow',
+      subtitle: 'Active Participant',
+      category: 'Seminar',
+      event: 'AI Ethics & Future of Compute',
+      dateEarned: 'Jun 2025',
+      type: 'Participation',
+      emoji: '💡',
+      hasCertificate: true,
+      certificateId: 'OX-CERT-2025-0633',
+      issuer: 'AI Society, NSUT',
+      certificateTitle: 'Certificate of Participation',
+      description: 'Participated in distinguished campus seminars on generative AI and ethics.'
+    },
+    {
+      id: 'badge-4',
+      title: 'Campus Lead Organizer',
+      subtitle: 'Hosted 2+ Campus Events',
+      category: 'Community',
+      event: 'OpportuneX Campus Chapter',
+      dateEarned: 'Aug 2025',
+      type: 'Honor',
+      emoji: '🎖️',
+      hasCertificate: false,
+      description: 'Recognized for organizing high-impact campus events and student workshops.'
+    },
+    {
+      id: 'badge-5',
+      title: '3-Month Active Streak',
+      subtitle: 'Consistent Participation',
+      category: 'Engagement',
+      event: 'Summer Tech Sprint',
+      dateEarned: 'Jul 2025',
+      type: 'Milestone',
+      emoji: '🔥',
+      hasCertificate: false,
+      description: 'Maintained active registration and event check-in streak for 90 days.'
+    },
+    {
+      id: 'badge-6',
+      title: 'Algorithm Ace',
+      subtitle: 'Top 5% Finalist',
+      category: 'Competition',
+      event: 'Pan-India Code Sprint',
+      dateEarned: 'May 2025',
+      type: 'Award',
+      emoji: '💻',
+      hasCertificate: true,
+      certificateId: 'OX-CERT-2025-0512',
+      issuer: 'ACM Student Chapter',
+      certificateTitle: 'Certificate of Merit',
+      description: 'Ranked in the top 5th percentile among 1,200+ collegiate competitors.'
+    }
+  ]
+}
